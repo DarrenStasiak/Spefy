@@ -1,5 +1,5 @@
 ﻿using System;
-using SpefyClassLibrary;
+using SpefyClassLibrary.Services;
 
 namespace Spefy
 {
@@ -16,7 +16,7 @@ namespace Spefy
         {
             x = new SpotifyService();
             x.Init();
-            await x.GetName("11dFghVXANMlKmJXsNCbNl");
+            await x.PopulateDatasetPlaylist("49kRPTDZ0q81msXBncY3XO");
 
 
         }
