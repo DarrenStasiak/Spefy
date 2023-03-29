@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SpefyClassLibrary\SpefyClassLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Databases\" />
     <Folder Include="Resources\" />
   </ItemGroup>
