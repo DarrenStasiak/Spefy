@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Spefy.Contract.Dtos.User.ValueObjects;
+using Spefy.Contract.Dtos.ValueObjects;
 
 namespace Spefy.Contract.Dtos.User
 {

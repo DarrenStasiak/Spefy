@@ -1,5 +1,5 @@
 ﻿using Spefy.Contract.Dtos.User;
-using Spefy.Contract.Dtos.User.ValueObjects;
+using Spefy.Contract.Dtos.ValueObjects;
 using SpotifyAPI.Web;
 using System;
 using System.Collections.Generic;

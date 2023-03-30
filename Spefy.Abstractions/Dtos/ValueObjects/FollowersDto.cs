@@ -1,4 +1,4 @@
-﻿namespace Spefy.Contract.Dtos.User.ValueObjects
+﻿namespace Spefy.Contract.Dtos.ValueObjects
 {
     public class FollowersDto
     {

@@ -39,5 +39,24 @@ namespace Spefy.Core.Services.Users
 
             return new UserDataDto();
         }
+
+        public async Task<string> GetUserId()
+        {
+            string token = _authorizeService.GetToken();
+            string tokenType = _authorizeService.GetTokenType();
+            if (!string.IsNullOrEmpty(token))
+            {
+                var clientContent = SpotifyClientConfig.CreateDefault().WithToken(token, tokenType);
+                var client = new SpotifyClient(clientContent);
+                var userData = await client.UserProfile.Current();
+
+                return userData.Id;
+            }
+            else
+            {
+                throw new ValidTokenException();
+            }
+            return "";
+        }
     }
 }

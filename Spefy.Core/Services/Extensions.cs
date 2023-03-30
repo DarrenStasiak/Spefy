@@ -11,6 +11,7 @@ using SpotifyAPI.Web.Auth;
 using SpotifyAPI.Web;
 using Spefy.Core.SpotifyProvider.SpotifyServer;
 using Spefy.Core.Services.Auth;
+using Spefy.Core.Services.Display;
 
 namespace Spefy.Core.Services
 {
@@ -24,6 +25,9 @@ namespace Spefy.Core.Services
             services.AddScoped<ITrackService, TrackService>();
             services.AddScoped<IPlaylistService, PlaylistService>();
             services.AddScoped<IAuthorizeService, AuthorizeService>();
+            services.AddScoped<ICreateDataService, CreateDataService>();
+            services.AddScoped<IDisplayDataService, DisplayDataService>();
+            services.AddScoped<ISearchDataService, SearchDataService>();
 
             services.AddScoped<ISpotifyClient, SpotifyClient>();
 

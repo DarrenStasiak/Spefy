@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Spefy.Contract.Dtos.User.ValueObjects
+namespace Spefy.Contract.Dtos.ValueObjects
 {
     public class ExplicitContentDto
     {
