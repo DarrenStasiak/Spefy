@@ -53,8 +53,6 @@ namespace SpefyClassLibrary.Services
             }
             Console.ReadLine();
 
-
-
         }
 
         public async Task PopulateDatasetPlaylist(string id)
