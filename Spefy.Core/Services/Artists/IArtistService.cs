@@ -10,5 +10,6 @@ namespace Spefy.Core.Services.Artists
     public interface IArtistService
     {
         Task<ArtistDataDto> GetArtistById(string Id);
+        Task<List<string>> SearchForArtists(string query);
     }
 }

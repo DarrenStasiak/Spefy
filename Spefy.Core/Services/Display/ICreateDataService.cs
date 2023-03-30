@@ -3,6 +3,5 @@
     public interface ICreateDataService
     {
         void CreatePlaylistMenu();
-        void DeletePlaylistMenu();
     }
 }

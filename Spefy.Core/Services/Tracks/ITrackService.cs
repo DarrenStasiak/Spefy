@@ -10,5 +10,6 @@ namespace Spefy.Core.Services.Tracks
     public interface ITrackService
     {
         Task<TrackDataDto> GetTrackById(string id);
+        Task<List<string>> SearchForTracks(string query);
     }
 }
