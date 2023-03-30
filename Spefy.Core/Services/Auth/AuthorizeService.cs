@@ -108,9 +108,6 @@ namespace Spefy.Core.Services.Auth
 
             var ClientContent = SpotifyClientConfig.CreateDefault().WithToken(token.AccessToken, token.TokenType);
             var client = new SpotifyClient(ClientContent);
-
-            Console.Clear();
-            Console.WriteLine("x");
         }
 
     }

@@ -32,25 +32,30 @@ namespace Spefy.App
         {
             _authorizeService.Authorize();
 
-            var option = StartMenu();
-            switch (option)
+            while(true)
             {
-                case 1:
-                    DisplayMenu();
-                    break;
+                var option = StartMenu();
+                switch (option)
+                {
+                    case 1:
+                        DisplayMenu();
+                        break;
 
-                case 2:
-                    CreateMenu();
-                    break;
+                    case 2:
+                        CreateMenu();
+                        break;
 
-                case 3:
-                    SearchMenu();
-                    break;
+                    case 3:
+                        SearchMenu();
+                        break;
+                }
             }
+
 
         }
         private int StartMenu()
         {
+            Console.Clear();
             Console.WriteLine("____SPEFY____ \n\n");
             Console.WriteLine("Choose Option");
             Console.WriteLine("1.Display Data");
@@ -140,7 +145,7 @@ namespace Spefy.App
                 string x = Console.ReadLine();
                 if (int.TryParse(x, out int result))
                 {
-                    if (result > 0 && result < 3)
+                    if (result > 0 && result < 2)
                     {
                         Console.Clear();
                         switch (result)
@@ -148,11 +153,6 @@ namespace Spefy.App
                             case 1:
                                 _createDataService.CreatePlaylistMenu();
                                 break;
-
-                            case 2:
-                                _createDataService.DeletePlaylistMenu();
-                                break;
-
 
                         }
                     }

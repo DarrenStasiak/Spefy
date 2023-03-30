@@ -24,19 +24,45 @@ namespace Spefy.Core.Services.Display
 
         public async Task DisplayArtistDataMenu()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Insert Song Id");
+            var id = Console.ReadLine();
+            var artist = await _artistService.GetArtistById(id);
+            if (artist != null)
+            {
+                Console.WriteLine(artist.ToJson());
+            }
+            else
+            {
+                Console.WriteLine("Artist not found");
+            }
+            Console.ReadLine();
         }
 
         public async Task DisplaySongDataMenu()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Insert Song Id");
+            var id = Console.ReadLine();
+            var song = await _trackService.GetTrackById(id);
+            if(song != null)
+            {
+                Console.WriteLine(song.ToJson());
+            }
+            else
+            {
+                Console.WriteLine("Song not found");
+            }
+            Console.ReadLine();
+
         }
 
         public async Task DisplayUserDataMenu()
         {
             Console.Clear();
             var user = await _userService.GetUserDataAsync();
-            Console.WriteLine(user.Humanize());
+            Console.WriteLine(user.ToJson());
+            Console.ReadLine();
         }
     }
 }
